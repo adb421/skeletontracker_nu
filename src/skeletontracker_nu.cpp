@@ -213,11 +213,11 @@ public:
 	    frame << child_frame_id << "_" << user;
 	    transform.setOrigin(tf::Vector3(position.x, position.y, position.z));
 	    transform.setRotation(tf::Quaternion(qx, qy, qz, qw));
-	    br.sendTransform(tf::StampedTransform(
-				 transform,
-				 t,
-				 "camera_depth_optical_frame",
-				 frame.str()));
+	    // br.sendTransform(tf::StampedTransform(
+	    // 			 transform,
+	    // 			 t,
+	    // 			 "camera_depth_optical_frame",
+	    // 			 frame.str()));
 	    
 	    j.transform.translation.x = transform.getOrigin().x();
 	    j.transform.translation.y = transform.getOrigin().y();
